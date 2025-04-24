@@ -278,7 +278,7 @@
      }
 
      .DivH1P {
-         width: 150PX;
+         width: 150PX; height:100px;
      }
 
      .sv {
@@ -407,7 +407,7 @@
          font-size: 20px;
      }
 
-     @media (max-width:950px) {
+     @media (max-width: 900px) and (min-width: 650px) {
          .DivAllC {
              display: grid;
              grid-template-columns: auto auto;
@@ -423,22 +423,22 @@
          }
      }
 
-     @media (max-width:700px) {
+     @media(max-width: 649px){
          .DivAllC {
              display: flex;
              align-items: center;
              flex-direction: column;
-             justify-content: space-evenly;
+             justify-content: space-evenly;width: 100%;
          }
 
          .DivA {
              background-color: rgb(202, 202, 226);
-             width:95%;
+             width: 95%;
              height: 290px;
              border-radius: 30px;
              margin: 5px;
              display: grid;
-             padding: 4px;
+             padding: 1px;
 
          }
 
