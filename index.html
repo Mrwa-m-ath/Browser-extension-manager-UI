@@ -1,0 +1,454 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ </head>
+
+ <body id="Bo">
+
+     <div class="HeadDiv" id="He">
+         <img src="images/logo.svg" alt="">
+         <button onclick="ChangeDark()" class="toggle-icon">
+             <div style=" position: relative; bottom:10px; left: 15px;background-color:rgb(212, 211, 210) ;align-items: center;border-radius: 16px;"> <img id="modeIcon" style="width: 75px; " src="images/icon-sun.svg" alt=""></div>
+
+         </button>
+     </div>
+     <div id="scs">
+         <h1 id="Extensions">Extensions List</h1>
+         <div class="Ad">
+             <div class="sv"> <a class="he" href="">All</a></div>
+             <div class="sv"> <a class="he" href="">Active</a></div>
+             <div class="sv"> <a class="he" href="">Inactive</a></div>
+
+         </div>
+     </div>
+     <br><br>
+     <div class="DivAllC">
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-devlens.svg" alt="">
+                 <div class="DivH1P">
+                     <h1> DevLens</h1>
+                     <p>Quickly inspect page layouts and visualize element boundaries.</p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-style-spy.svg">
+                 <div class="DivH1P">
+                     <h1> StyleSpy </h1>
+                     <p>Instantly analyze and copy CSS from any webpage element</p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-speed-boost.svg">
+                 <div class="DivH1P">
+                     <h1> JSONWizard </h1>
+                     <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-speed-boost.svg">
+                 <div class="DivH1P">
+                     <h1> TabMaster Pro </h1>
+                     <p> Organizes browser tabs into groups and sessions. </p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-markup-notes.svg">
+                 <div class="DivH1P">
+                     <h1> Markup Notes </h1>
+                     <p> Enables annotation and notes directly onto webpages for collaborative debugging. </p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-palette-picker.svg">
+                 <div class="DivH1P">
+                     <h1>Palette Picker </h1>
+                     <p> Instantly extracts color palettes from any webpage </p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-link-checker.svg">
+                 <div class="DivH1P">
+                     <h1>LinkChecker </h1>
+                     <p>Scans and highlights broken links on any page</p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+         <div class="DivA">
+             <div class="sc">
+                 <img src="images/logo-console-plus.svg">
+                 <div class="DivH1P">
+                     <h1>ConsolePlus </h1>
+                     <p> Enhanced developer console with advanced filtering and logging. </p>
+                 </div>
+             </div>
+             <div class="ThirdDo">
+                 <button>Remove</button>
+                 <label class="switch">
+                     <input type="checkbox">
+                     <span class="slider round"></span>
+                 </label>
+             </div>
+
+         </div>
+     </div>
+
+ </body>
+
+ </html>
+ <script>
+     function ChangeDark() {
+         const bo = document.getElementById('Bo');
+         const isDark = bo.style.backgroundColor === "rgb(11, 11, 37)";
+         const links = document.querySelectorAll('.he');
+         const DivH = document.querySelectorAll('.sv');
+         const modeIcon = document.getElementById('modeIcon');
+         const title = document.getElementById('Extensions');
+
+         if (isDark) {
+             bo.style.backgroundColor = "rgb(255, 255, 255)";
+             title.style.color = "rgb(11, 11, 37)";
+             links.forEach(link => link.style.color = "rgb(11, 11, 37)");
+             DivH.forEach(div => div.style.backgroundColor = "rgb(93, 93, 99)");
+            modeIcon.src = "images/icon-moon.svg";
+         } else {
+             bo.style.backgroundColor = "rgb(11, 11, 37)";
+             title.style.color = "rgb(255, 255, 255)";
+             links.forEach(link => link.style.color = "rgb(255, 255, 255)");
+             DivH.forEach(div => div.style.backgroundColor = "rgb(178, 178, 185)");
+             modeIcon.src = "images/icon-sun.svg"; 
+         }
+     }
+ </script>
+ <style>
+     .switch {
+         position: relative;
+         display: inline-block;
+         width: 60px;
+         height: 34px;
+     }
+
+     .switch input {
+         opacity: 0;
+         width: 0;
+         height: 0;
+     }
+
+     .slider {
+         position: absolute;
+         cursor: pointer;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: #6e6060;
+         -webkit-transition: .4s;
+         transition: .4s;
+     }
+
+     .slider:before {
+         position: absolute;
+         content: "";
+         height: 26px;
+         width: 26px;
+         left: 4px;
+         bottom: 4px;
+         background-color: rgb(10, 10, 10);
+         -webkit-transition: .4s;
+         transition: .4s;
+     }
+
+     input:checked+.slider {
+         background-color: #2196F3;
+     }
+
+     input:focus+.slider {
+         box-shadow: 0 0 1px #2196F3;
+     }
+
+     input:checked+.slider:before {
+         -webkit-transform: translateX(26px);
+         -ms-transform: translateX(26px);
+         transform: translateX(26px);
+     }
+
+     /* Rounded sliders */
+     .slider.round {
+         border-radius: 34px;
+     }
+
+     .slider.round:before {
+         border-radius: 50%;
+     }
+
+     .ThirdDo {
+         display: flex;
+         justify-content: space-between;
+         margin: 20px;
+
+     }
+
+     .ThirdDo button {
+         border-radius: 16px;
+         background-color: #46578d;
+         width: 150px;
+         height: 40px;
+         color: white;
+
+     }
+
+     .DivA img {
+         width: 100px;
+         height: 100px;
+         padding: 19px;
+     }
+
+     .DivH1P {
+         width: 150PX;
+     }
+
+     .sv {
+         background-color: rgb(178, 178, 185);
+         margin: 11px;
+         width: 100px;
+         height: 30px;
+         border-radius: 12px;
+
+         padding: 20px;
+     }
+
+     .sv:hover {
+         background-color: rgb(109, 74, 74);
+     }
+
+     * {
+         font-family: Arial, Helvetica, sans-serif;
+     }
+
+     .Ad {
+         display: flex;
+
+         text-align: center;
+
+     }
+
+     #scs {
+         padding: 30px;
+         width: 80%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+     }
+
+     #Extensions {
+         color: rgb(167, 155, 155);
+     }
+
+     .he {
+
+         font-size: 18px;
+         text-align: center;
+         text-align: center;
+         text-decoration: none;
+         font-weight: bold;
+         color: white;
+     }
+
+     #Ext {
+         color: white;
+     }
+
+     .toggle-icon {
+         background: none;
+         border: none;
+         font-size: 30px;
+         cursor: pointer;
+         color: #000;
+         transition: 0.3s ease;
+     }
+
+     .dark-mode .toggle-icon {
+         color: #fff;
+     }
+
+     .HeadDiv button {
+         background-color: rgb(217, 217, 226);
+         border: none;
+     }
+
+     .HeadDiv {
+         margin: 30px;
+         background-color: rgb(217, 217, 226);
+         border-radius: 13px;
+         height: 60px;
+         width: 80%;
+         display: flex;
+         justify-content: space-between;
+         padding: 15px;
+         color: rgb(3, 3, 3);
+     }
+
+     .HeadDiv h1 {
+
+         font-size: 22px;
+     }
+
+     #Bo {
+         display: flex;
+         flex-direction: column;
+         background-color: rgb(11, 11, 37);
+         align-items: center;
+         height: 1550px;
+     }
+
+     .DivAllC {
+         display: grid;
+         justify-items: center;
+
+         grid-template-columns: repeat(3, auto);
+         /* يعني 3 أعمدة متساوية */
+         column-gap: 0px;
+         /* للتحكم بالمسافة بين الأعمدة والصفوف */
+         padding: 2px;
+         width: 90%;
+     }
+
+     .DivA {
+         background-color: rgb(202, 202, 226);
+         width: 95%;
+         height: 290px;
+         border-radius: 30px;
+         margin: 3px;
+         display: grid;
+         padding: 4px;
+
+     }
+
+     .sc {
+         display: flex;
+
+     }
+
+     .DivH1P h1 {
+         font-size: 20px;
+     }
+
+     @media (max-width:950px) {
+         .DivAllC {
+             display: grid;
+             grid-template-columns: auto auto;
+         }
+
+         #scs {
+             padding: 30px;
+             width: 80%;
+             display: flex;
+             align-items: start;
+             flex-direction: column;
+             justify-content: space-between;
+         }
+     }
+
+     @media (max-width:700px) {
+         .DivAllC {
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             justify-content: space-evenly;
+         }
+
+         .DivA {
+             background-color: rgb(202, 202, 226);
+             width: 80%;
+             height: 290px;
+             border-radius: 30px;
+             margin: 5px;
+             display: grid;
+             padding: 4px;
+
+         }
+
+         #scs {
+             padding: 30px;
+             width: 80%;
+             display: flex;
+             align-items: start;
+             flex-direction: column;
+             justify-content: space-between;
+         }
+     }
+ </style>
