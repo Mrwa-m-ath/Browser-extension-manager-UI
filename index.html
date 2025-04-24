@@ -14,9 +14,8 @@
      <div class="HeadDiv" id="He">
          <img src="images/logo.svg" alt="">
          <button onclick="ChangeDark()" class="toggle-icon">
-             <div class="vs",
-               >
-                 <img id="modeIcon"  src="images/icon-sun.svg" alt=""></div>
+             <div class="vs">
+                 <img id="modeIcon" src="images/icon-sun.svg" alt=""></div>
 
          </button>
      </div>
@@ -178,6 +177,7 @@
          const isDark = bo.style.backgroundColor === "rgb(11, 11, 37)";
          const links = document.querySelectorAll('.he');
          const DivH = document.querySelectorAll('.sv');
+         const DivH1 = document.querySelectorAll('.DivA');
          const modeIcon = document.getElementById('modeIcon');
          const title = document.getElementById('Extensions');
 
@@ -185,24 +185,38 @@
              bo.style.backgroundColor = "rgb(255, 255, 255)";
              title.style.color = "rgb(11, 11, 37)";
              links.forEach(link => link.style.color = "rgb(11, 11, 37)");
-             DivH.forEach(div => div.style.backgroundColor = "rgb(93, 93, 99)");
+             DivH.forEach(div => div.style.backgroundColor = "rgb(99, 99, 151)");
+             DivH1.forEach(div => div.style.boxShadow = "5px 5px 5px rgb(11, 11, 63)");
              modeIcon.src = "images/icon-moon.svg";
          } else {
              bo.style.backgroundColor = "rgb(11, 11, 37)";
              title.style.color = "rgb(255, 255, 255)";
              links.forEach(link => link.style.color = "rgb(255, 255, 255)");
-             DivH.forEach(div => div.style.backgroundColor = "rgb(178, 178, 185)");
+             DivH.forEach(div => div.style.backgroundColor = "rgb(99, 99, 80)");
+             DivH1.forEach(div => div.style.boxShadow = "5px 5px 5px rgb(255 ,255,255)");
              modeIcon.src = "images/icon-sun.svg";
          }
      }
  </script>
  <style>
-    #modeIcon{
-        width: 75px; 
-    }
-    .vs{
-        position: relative; bottom:10px; left: 15px;background-color:rgb(212, 211, 210) ;align-items: center;border-radius: 16px;
-    }
+     .vs:hover {
+         background-color: rgb(150, 144, 109);
+     }
+
+     #modeIcon {
+         width: 75px;
+     }
+
+     .vs {
+         position: relative;
+         bottom: 10px;
+         left: 15px;
+         background-color: rgb(99, 99, 151);
+         ;
+         align-items: center;
+         border-radius: 16px;
+     }
+
      .switch {
          position: relative;
          display: inline-block;
@@ -254,7 +268,6 @@
          transform: translateX(26px);
      }
 
-     /* Rounded sliders */
      .slider.round {
          border-radius: 34px;
      }
@@ -290,9 +303,9 @@
      }
 
      .sv {
-         background-color: rgb(178, 178, 185);
+         background-color: rgb(99, 99, 151);
          margin: 11px;
-         width: 100px;
+         width: 60px;
          height: 30px;
          border-radius: 12px;
 
@@ -400,10 +413,10 @@
          width: 95%;
          height: 290px;
          border-radius: 30px;
-         margin: 3px;
+         margin: 5px;
          display: grid;
          padding: 4px;
-
+         box-shadow: 5px 5px 5px rgb(238, 237, 240)
      }
 
      .sc {
@@ -415,7 +428,7 @@
          font-size: 20px;
      }
 
-     @media (max-width:1000px)  {
+     @media (max-width:1000px) {
          .DivAllC {
              display: grid;
              grid-template-columns: auto auto;
@@ -466,9 +479,9 @@
              text-align: center;
 
          }
-        
-  #modeIcon{
-        width: 50px;
-    }
+
+         #modeIcon {
+             width: 50px;
+         }
      }
  </style>
