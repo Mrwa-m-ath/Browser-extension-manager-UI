@@ -14,7 +14,9 @@
      <div class="HeadDiv" id="He">
          <img src="images/logo.svg" alt="">
          <button onclick="ChangeDark()" class="toggle-icon">
-             <div style=" position: relative; bottom:10px; left: 15px;background-color:rgb(212, 211, 210) ;align-items: center;border-radius: 16px;"> <img id="modeIcon" style="width: 75px; " src="images/icon-sun.svg" alt=""></div>
+             <div
+                 style=" position: relative; bottom:10px; left: 15px;background-color:rgb(212, 211, 210) ;align-items: center;border-radius: 16px;">
+                 <img id="modeIcon" style="width: 75px; " src="images/icon-sun.svg" alt=""></div>
 
          </button>
      </div>
@@ -184,13 +186,13 @@
              title.style.color = "rgb(11, 11, 37)";
              links.forEach(link => link.style.color = "rgb(11, 11, 37)");
              DivH.forEach(div => div.style.backgroundColor = "rgb(93, 93, 99)");
-            modeIcon.src = "images/icon-moon.svg";
+             modeIcon.src = "images/icon-moon.svg";
          } else {
              bo.style.backgroundColor = "rgb(11, 11, 37)";
              title.style.color = "rgb(255, 255, 255)";
              links.forEach(link => link.style.color = "rgb(255, 255, 255)");
              DivH.forEach(div => div.style.backgroundColor = "rgb(178, 178, 185)");
-             modeIcon.src = "images/icon-sun.svg"; 
+             modeIcon.src = "images/icon-sun.svg";
          }
      }
  </script>
@@ -278,7 +280,7 @@
      }
 
      .DivH1P {
-         width: 150PX; height:100px;
+         width: 150PX;
      }
 
      .sv {
@@ -407,7 +409,7 @@
          font-size: 20px;
      }
 
-     @media (max-width: 900px) and (min-width: 650px) {
+     @media (max-width:1000px)  {
          .DivAllC {
              display: grid;
              grid-template-columns: auto auto;
@@ -423,12 +425,13 @@
          }
      }
 
-     @media(max-width: 649px){
+     @media(max-width: 700px) {
          .DivAllC {
              display: flex;
              align-items: center;
              flex-direction: column;
-             justify-content: space-evenly;width: 100%;
+             justify-content: space-evenly;
+             width: 100%;
          }
 
          .DivA {
@@ -449,14 +452,13 @@
              align-items: start;
              flex-direction: column;
              justify-content: space-between;
-         }.sv {
-         background-color: rgb(178, 178, 185);
-         margin: 11px;
-         width: 100px;
-         height: 30px;
-         border-radius: 12px;
+         }
 
-         padding: 5px;
-     }
+         .Ad {
+             display: flex;
+             width: 90%;
+             text-align: center;
+
+         }
      }
  </style>
